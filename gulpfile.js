@@ -23,7 +23,7 @@ function html(done) {
         done()
 }
 
-function watchHtml() {
+function watchHtml(done) {
     gulp.watch("./src/html/**/*.ejs", { ignoreInitial: false }, html);
 }
 
@@ -38,19 +38,19 @@ function scss(done) {
     done();
 }
 
-function watchScss() {
+function watchScss(done) {
     gulp.watch('./src/css/**/*.scss', { ignoreInitial: false }, scss);
 }
 
-function javascript(done){
+function js(done){
     gulp.src('./src/javascript/**/*.js')
     .pipe(gulp.dest('./dist/assets/javascript'))
     .pipe(connect.reload());
     done();
 }
 
-function watchJavascript() {
-    gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, javascript);
+function watchJs(done) {
+    gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, js);
 }
 
 function json(done) {
@@ -60,7 +60,7 @@ function json(done) {
     done();
 }
 
-function watchJson() {
+function watchJson(done) {
     gulp.watch('./src/json/*json', { ignoreInitial: false}, json);
 }
 
@@ -72,16 +72,16 @@ function images(done) {
     done();
 }
 
-function Watchimages() {
+function WatchImages(done) {
     gulp.watch('./src/images/*', { ignoreInitial: false }, images);
 }
 
 gulp.task('dev', function(done){
     watchHtml();
     watchScss();
-    watchJavascript();
+    watchJs();
     watchJson();
-    Watchimages();
+    WatchImages();
     connect.server({
         livereload: true,
         root: "dist"
@@ -92,7 +92,7 @@ gulp.task('dev', function(done){
 gulp.task('build', function(done) {
     html(done);
     scss(done);
-    javaScript();
+    js();
     json(done);
     images(done);
     done();
