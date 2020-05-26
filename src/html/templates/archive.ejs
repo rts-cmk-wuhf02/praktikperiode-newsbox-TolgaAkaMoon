@@ -1,0 +1,84 @@
+<% include ../partials/head %>
+
+<body class="bg-utility-newsbg">
+    <header
+        class="header bg-utility-newsbg flex items-center justify-between flex-row py-5 px-5 border-solid border-border-grey border-b">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10.823" height="16.857" viewBox="0 0 10.823 16.857">
+                <g id="icn_back" transform="translate(41.596 42.892) rotate(180)">
+                    <line id="Line_17" data-name="Line 17" y1="6.981" x2="8" transform="translate(32.185 34.5)"
+                        fill="none" stroke="#324755" stroke-linecap="round" stroke-width="2" />
+                    <path id="Path_44" data-name="Path 44" d="M1.079-.035,9,7" transform="translate(31.185 27.481)"
+                        fill="#324755" stroke="#334856" stroke-linecap="round" stroke-width="2" />
+                </g>
+            </svg>
+        </a>
+        <h3 class="text-18px text-typography-onyx font-bold">Archive</h3>
+        <a href="../gear/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="19.454" height="20"
+                viewBox="0 0 19.454 20">
+                <path id="ic_settings_24px"
+                    d="M19.43,12.98A7.793,7.793,0,0,0,19.5,12a7.793,7.793,0,0,0-.07-.98l2.11-1.65a.5.5,0,0,0,.12-.64l-2-3.46a.5.5,0,0,0-.61-.22l-2.49,1a7.306,7.306,0,0,0-1.69-.98l-.38-2.65A.488.488,0,0,0,14,2H10a.488.488,0,0,0-.49.42L9.13,5.07a7.683,7.683,0,0,0-1.69.98l-2.49-1a.488.488,0,0,0-.61.22l-2,3.46a.493.493,0,0,0,.12.64l2.11,1.65A7.931,7.931,0,0,0,4.5,12a7.931,7.931,0,0,0,.07.98L2.46,14.63a.5.5,0,0,0-.12.64l2,3.46a.5.5,0,0,0,.61.22l2.49-1a7.306,7.306,0,0,0,1.69.98l.38,2.65A.488.488,0,0,0,10,22h4a.488.488,0,0,0,.49-.42l.38-2.65a7.683,7.683,0,0,0,1.69-.98l2.49,1a.488.488,0,0,0,.61-.22l2-3.46a.5.5,0,0,0-.12-.64ZM12,15.5A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+                    transform="translate(-2.271 -2)" fill="#324755" />
+            </svg>
+        </a>
+    </header>
+    <div class="bg-utility-newsbg p-4 border-solid border-utility-bordergrey border-b">
+        <form class="w-full max-w-sm">
+            <div class="flex justify-between items-center  bg-utility-inputgrey rounded p-2">
+                <input type="text" placeholder='Search news' class="input pl-5 outline-none bg-utility-inputgrey">
+                <button type="submit"><img src="../assets/images/icn_search_dark.svg" alt="" class="pr-2"></button>
+            </div>
+        </form>
+    </div>
+    <main class="main relative mb-48 overflow-hidden">
+    </main>
+    <template class="categoryContainerTemplate">
+        <div
+            class="main__categoryContainer bg-utility-newsbg p-4 border-solid border-utility-bordergrey border-b flex flex-row items-center ">
+            <div class="rounded-full shadow-lg flex items-center justify-center p-2 mx-2">
+                <img src="../assets/images/icn_surfing.svg" alt="">
+            </div>
+            <div class="flex flex-row justify-between content-center w-5/6">
+                <h3 class="text-15px text-typography-onyx font-bold">Category</h3>
+                <svg class="transform -rotate-90 mr-1 mt-1 duration-100" xmlns="http://www.w3.org/2000/svg" width="18"
+                    height="16" viewBox="0 0 16 16">
+                    <g stroke="#324755" stroke-linecap="round" stroke-width="2">
+                        <line x1="2" y1="8" x2="10" y2="2" />
+                        <line x1="2" y1="8" x2="10" y2="14" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </template>
+    <template class="articleTemplate">
+        <div class="article flex flex-row border-solid border-utility-bordergrey border-b">
+            <a href="" target="_blank" class="article__link w-full max-w-sm flex flex-row">
+                <img src="../assets/images/image_21.svg" alt="" class="m-4 rounded-full w-18 h-18">
+                <article class="mr-4 my-4">
+                    <h4 class="font-bold text-typography-onyx text-15px line-clamp overflow-hidden">Heading</h4>
+                    <p class="line-clamp overflow-hidden text-14px font-light text-typography-pblue">Lorem,
+                        ipsum
+                        dolor
+                        sit
+                        amet
+                        consectetur
+                        adipisicing elit.
+                        Architecto voluptatem quis mollitia iure? Totam provident praesentium ea fugit saepe!
+                        Dolorum!
+                    </p>
+                </article>
+            </a>
+            <button
+                class="archiveBtn bg-primary-danger absolute -right-20 h-full w-20 m-0 flex justify-center items-center focus:outline-none">
+                <svg id="Delete" xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18">
+                    <path id="ic_delete_24px"
+                        d="M6,19a2.006,2.006,0,0,0,2,2h8a2.006,2.006,0,0,0,2-2V7H6ZM19,4H15.5l-1-1h-5l-1,1H5V6H19Z"
+                        transform="translate(-5 -3)" fill="#fff" />
+                </svg>
+            </button>
+        </div>
+    </template>
+    <script src="../assets/javascript/util.js"></script>
+    <script type='module' src="../assets/javascript/archive.js"></script>
+
+<% include ../partials/after-footer %>
