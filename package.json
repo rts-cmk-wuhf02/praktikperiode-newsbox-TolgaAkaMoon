@@ -2,10 +2,9 @@
   "name": "gulp-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i && gulp build",
     "dev": "gulp dev"
   },
   "author": "",
@@ -20,9 +19,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.0",
-    "tailwindcss": "^1.4.6"
-  },
-  "devDependencies": {
+    "tailwindcss": "^1.4.6",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0"
   }
