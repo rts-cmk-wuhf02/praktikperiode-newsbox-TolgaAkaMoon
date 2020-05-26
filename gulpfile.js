@@ -92,7 +92,7 @@ gulp.task('dev', function(done){
 gulp.task('build', function(done) {
     html(done);
     scss(done);
-    javaScript(done);
+    javaScript();
     json(done);
     images(done);
     done();
