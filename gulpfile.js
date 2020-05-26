@@ -43,14 +43,14 @@ function watchScss() {
 }
 
 function javascript(done){
-    gulp.src('./src/js/**/*.js')
+    gulp.src('./src/javascript/**/*.js')
     .pipe(gulp.dest('./dist/assets/javascript'))
     .pipe(connect.reload());
     done();
 }
 
 function watchJavascript() {
-    gulp.watch('./src/js/**/*.js', { ignoreInitial: false }, javascript);
+    gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, javascript);
 }
 
 function json(done) {
@@ -90,10 +90,10 @@ gulp.task('dev', function(done){
 });
 
 gulp.task('build', function(done) {
-    html(done);
-    scss(done);
-    javaScript(done);
-    json(done);
-    images(done);
+    html();
+    scss();
+    javaScript();
+    json();
+    images();
     done();
 });
