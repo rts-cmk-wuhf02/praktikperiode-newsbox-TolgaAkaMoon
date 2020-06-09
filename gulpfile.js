@@ -3,7 +3,7 @@ const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
 const connect = require("gulp-connect");
 const sass = require("gulp-sass");
-const postcss = require('gulp-postcss');
+const postcss = require('gulp-postcss');    
 const imagemin = require('gulp-imagemin');
 
 sass.compiler = require('node-sass');
@@ -53,17 +53,6 @@ function watchJs(done) {
     gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, js);
 }
 
-function json(done) {
-    gulp.src('./src/json/*.json')
-    .pipe(gulp.dest('./dist/assets/data'))
-    ,pipe(connect.reload());
-    done();
-}
-
-function watchJson(done) {
-    gulp.watch('./src/json/*json', { ignoreInitial: false}, json);
-}
-
 function images(done) {
     gulp.src('./src/images/*')
         .pipe(imagemin())
@@ -80,7 +69,6 @@ gulp.task('dev', function(done){
     watchHtml();
     watchScss();
     watchJs();
-    watchJson();
     WatchImages();
     connect.server({
         livereload: true,
@@ -93,7 +81,6 @@ gulp.task('build', function(done) {
     html(done);
     scss(done);
     js(done);
-    json(done);
     images(done);
     done();
 });
